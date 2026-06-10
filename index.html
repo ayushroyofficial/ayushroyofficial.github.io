@@ -17,16 +17,51 @@ font-family:Arial,sans-serif;
 body{
 background:linear-gradient(
 135deg,
-#020617,
-#0f172a,
-#1e1b4b,
-#020617
+#000000,
+#111827,
+#3b0764,
+#000000
 );
 
 background-size:400% 400%;
 animation:bgmove 15s infinite;
 
 color:white;
+}
+  body::before{
+
+content:"";
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background-image:
+radial-gradient(white 1px, transparent 1px);
+
+background-size:50px 50px;
+
+opacity:0.15;
+
+animation:stars 100s linear infinite;
+
+z-index:-1;
+}
+
+@keyframes stars{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-2000px);
+}
+
 }
 
 @keyframes bgmove{
@@ -50,7 +85,36 @@ background:rgba(0,0,0,0.5);
 padding:20px;
 backdrop-filter:blur(10px);
 }
+<img
+src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png"
+class="robot"
+>
+  .robot{
 
+width:220px;
+
+animation:float 4s ease-in-out infinite;
+
+margin-bottom:20px;
+
+filter:drop-shadow(0 0 30px #38bdf8);
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-20px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
 h1{
 
 font-size:75px;
