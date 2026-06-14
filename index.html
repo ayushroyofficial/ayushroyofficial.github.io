@@ -1,4 +1,4 @@
-```html
+```html id="jlwm6n"
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,9 +20,8 @@ scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#020617,#0f172a,#1e293b);
+background:#0f172a;
 color:white;
-overflow-x:hidden;
 }
 
 /* Navbar */
@@ -31,9 +30,8 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 10%;
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
+padding:25px 10%;
+background:#111827;
 position:sticky;
 top:0;
 z-index:1000;
@@ -48,7 +46,7 @@ color:#38bdf8;
 nav a{
 color:white;
 text-decoration:none;
-margin-left:25px;
+margin-left:30px;
 font-size:18px;
 transition:0.3s;
 }
@@ -57,152 +55,151 @@ nav a:hover{
 color:#38bdf8;
 }
 
-/* Hero */
+/* Hero Section */
 
 .hero{
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
 padding:120px 10%;
-min-height:90vh;
+max-width:1100px;
+margin:auto;
 }
 
-.hero-text{
-max-width:850px;
-}
-
-.hero-text h1{
+.hero h1{
 font-size:80px;
 margin-bottom:20px;
+line-height:1.1;
+}
+
+.hero span{
 color:#38bdf8;
 }
 
-.hero-text h2{
-font-size:32px;
-margin-bottom:25px;
-font-weight:normal;
-color:#e2e8f0;
-}
-
-.hero-text p{
-font-size:20px;
+.hero p{
+font-size:22px;
 line-height:1.8;
 color:#cbd5e1;
-margin-bottom:40px;
+max-width:800px;
+margin-top:20px;
 }
 
-button{
+.buttons{
+margin-top:40px;
+}
+
+.btn{
+display:inline-block;
 padding:15px 35px;
-border:none;
-border-radius:30px;
 background:#38bdf8;
 color:white;
-font-size:18px;
-cursor:pointer;
+text-decoration:none;
+border-radius:10px;
+margin-right:15px;
 transition:0.3s;
+font-size:18px;
 }
 
-button:hover{
-transform:scale(1.05);
+.btn:hover{
+transform:translateY(-5px);
 background:#0ea5e9;
 }
 
-/* Cards */
+/* About Cards */
 
-.stats{
+.about{
+padding:80px 10%;
 display:flex;
-justify-content:center;
-gap:25px;
-margin-top:50px;
+gap:30px;
 flex-wrap:wrap;
+justify-content:center;
 }
 
 .card{
-background:rgba(255,255,255,0.05);
-padding:30px;
+background:#111827;
+padding:35px;
 border-radius:20px;
-width:250px;
+width:300px;
 transition:0.3s;
 }
 
 .card:hover{
 transform:translateY(-10px);
-background:rgba(255,255,255,0.1);
 }
 
 .card h3{
 margin-bottom:15px;
 color:#38bdf8;
+font-size:24px;
+}
+
+.card p{
+line-height:1.7;
+color:#cbd5e1;
 }
 
 /* Projects */
 
 .projects{
-padding:100px 10%;
+padding:80px 10%;
 }
 
 .projects h2{
-text-align:center;
 font-size:50px;
-margin-bottom:60px;
-color:#38bdf8;
+margin-bottom:50px;
+text-align:center;
 }
 
-.project-container{
-display:flex;
-justify-content:center;
+.project-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
-flex-wrap:wrap;
 }
 
-.project-box{
-background:rgba(255,255,255,0.05);
-padding:35px;
+.project{
+background:#111827;
+padding:30px;
 border-radius:20px;
-width:320px;
 transition:0.3s;
 }
 
-.project-box:hover{
+.project:hover{
 transform:translateY(-10px);
-background:rgba(255,255,255,0.1);
 }
 
-.project-box h3{
+.project h3{
 margin-bottom:15px;
 color:#38bdf8;
 font-size:24px;
 }
 
-.project-box p{
-color:#d1d5db;
+.project p{
 line-height:1.7;
+color:#cbd5e1;
 }
 
 /* Footer */
 
 footer{
 text-align:center;
-padding:25px;
-background:rgba(255,255,255,0.05);
-margin-top:50px;
+padding:30px;
+margin-top:60px;
+background:#111827;
+color:#94a3b8;
 }
 
 /* Mobile */
 
-@media(max-width:900px){
+@media(max-width:768px){
 
-.hero-text h1{
+.hero h1{
 font-size:50px;
 }
 
-.hero-text h2{
-font-size:24px;
+.hero p{
+font-size:18px;
 }
 
-.hero-text p{
-font-size:18px;
+header{
+flex-direction:column;
+gap:15px;
 }
 
 }
@@ -218,42 +215,52 @@ font-size:18px;
 <div class="logo">Ayush Roy</div>
 
 <nav>
+
 <a href="#">Home</a>
 <a href="#projects">Projects</a>
 <a href="https://www.instagram.com/ayushroyyyyy?igsh=NHUwcGV1Mnl2Zjl4" target="_blank">Instagram</a>
+
 </nav>
 
 </header>
 
 <section class="hero">
 
-<div class="hero-text">
-
-<h1>Ayush Roy</h1>
-
-<h2>Innovator • Creator • Future Physicist</h2>
+<h1>
+Future <span>Physicist</span><br>
+& Tech Creator
+</h1>
 
 <p>
-Passionate about technology, creativity, innovation, and modern digital experiences.
-Exploring new ideas and building projects that inspire people and showcase imagination.
+Passionate about physics, innovation, 3D printing,
+creative technology, and futuristic project development.
+Building modern ideas and documenting learning experiences through projects and experiments.
 </p>
 
-<a href="https://www.instagram.com/ayushroyyyyy?igsh=NHUwcGV1Mnl2Zjl4" target="_blank">
+<div class="buttons">
 
-<button>
-Follow On Instagram
-</button>
-
+<a class="btn" href="#projects">
+View Projects
 </a>
 
-<div class="stats">
+<a class="btn" href="https://www.instagram.com/ayushroyyyyy?igsh=NHUwcGV1Mnl2Zjl4" target="_blank">
+Instagram
+</a>
+
+</div>
+
+</section>
+
+<section class="about">
 
 <div class="card">
 
-<h3>Featured Projects</h3>
+<h3>Physics Experiments</h3>
 
-<p>Physics Experiment</p>
-<p>Personal Portfolio Website</p>
+<p>
+Exploring practical and innovative physics experiments
+with creative demonstrations and real-world applications.
+</p>
 
 </div>
 
@@ -263,22 +270,20 @@ Follow On Instagram
 
 <p>
 Learning modern 3D printing technology,
-creative modeling, and innovative manufacturing ideas.
+creative modeling, and innovative manufacturing systems.
 </p>
 
 </div>
 
 <div class="card">
 
-<h3>Vision</h3>
+<h3>Creative Vision</h3>
 
 <p>
-Creating innovative ideas and learning modern technologies for the future.
+Interested in futuristic technology,
+AI concepts, modern web experiences,
+and innovative scientific ideas.
 </p>
-
-</div>
-
-</div>
 
 </div>
 
@@ -288,70 +293,48 @@ Creating innovative ideas and learning modern technologies for the future.
 
 <h2>Featured Projects</h2>
 
-<div class="project-container">
+<div class="project-grid">
 
-<div class="project-box">
+<div class="project">
 
-<h3>⚡ Smart Physics Experiments</h3>
+<h3>⚡ Smart Laser Security Alarm</h3>
 
 <p>
-Building innovative low-budget physics experiments
-for practical learning and creative demonstrations.
+A smart security project using laser light,
+LDR sensor, and buzzer system for intrusion detection.
 </p>
 
 </div>
 
-<div class="project-box">
+<div class="project">
 
-<h3>🖨️ 3D Printing Internship</h3>
+<h3>🖨️ 3D Printing Journey</h3>
 
 <p>
-Exploring modern 3D printing technology,
-creative model designing, and futuristic manufacturing systems.
+Documenting internship experiences,
+creative 3D models, and modern manufacturing concepts.
 </p>
 
 </div>
 
-<div class="project-box">
+<div class="project">
 
 <h3>🌐 Personal Portfolio Website</h3>
 
 <p>
-Designed and developed a modern responsive portfolio website
+Designed and developed a responsive modern website
 using HTML and CSS hosted on GitHub Pages.
 </p>
 
 </div>
 
-<div class="project-box">
+<div class="project">
 
-<h3>📷 Smart GPS Camera Project</h3>
-
-<p>
-Planning and developing a smart GPS camera system
-for educational and creative purposes.
-</p>
-
-</div>
-
-<div class="project-box">
-
-<h3>🤖 Future AI Ideas</h3>
+<h3>📷 Smart GPS Camera Idea</h3>
 
 <p>
-Exploring futuristic AI concepts,
-creative digital experiences, and innovative web technologies.
-</p>
-
-</div>
-
-<div class="project-box">
-
-<h3>🎥 Internship Video Journal</h3>
-
-<p>
-Uploading regular internship progress videos,
-creative experiments, and project development updates.
+Planning a smart educational GPS camera project
+for documentation and creative use.
 </p>
 
 </div>
@@ -362,7 +345,7 @@ creative experiments, and project development updates.
 
 <footer>
 
-© 2026 Ayush Roy | All Rights Reserved
+© 2026 Ayush Roy • All Rights Reserved
 
 </footer>
 
