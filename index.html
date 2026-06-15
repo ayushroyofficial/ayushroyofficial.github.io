@@ -2,11 +2,10 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ayush Roy</title>
+<title>Ayush Roy Portfolio</title>
 
 <style>
 
@@ -17,74 +16,29 @@ box-sizing:border-box;
 font-family:Arial,sans-serif;
 scroll-behavior:smooth;
 }
+
 body{
-margin:0;
-padding:0;
-font-family:Arial,sans-serif;
-color:white;
-background:linear-gradient(-45deg,#020617,#0f172a,#111827,#1e293b);
+background:linear-gradient(135deg,#020617,#0f172a,#1e1b4b,#020617);
 background-size:400% 400%;
-animation:bgmove 12s ease infinite;
-overflow-x:hidden;
-}
-
-/* Animated stars */
-
-body::before{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background-image:
-radial-gradient(white 1px, transparent 1px),
-radial-gradient(#38bdf8 1px, transparent 1px);
-background-size:60px 60px;
-opacity:0.15;
-animation:stars 20s linear infinite;
-z-index:-1;
+animation:bgmove 15s infinite;
+color:white;
 }
 
 @keyframes bgmove{
-
-0%{
-background-position:0% 50%;
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
-
-50%{
-background-position:100% 50%;
-}
-
-100%{
-background-position:0% 50%;
-}
-
-}
-
-@keyframes stars{
-
-0%{
-transform:translateY(0);
-}
-
-100%{
-transform:translateY(-100px);
-}
-
-}
-
-
-/* Navbar */
 
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:25px 10%;
-background:#111827;
+backdrop-filter:blur(10px);
 position:sticky;
 top:0;
+background:rgba(0,0,0,0.3);
 z-index:1000;
 }
 
@@ -95,8 +49,8 @@ color:#38bdf8;
 }
 
 nav a{
-color:white;
 text-decoration:none;
+color:white;
 margin-left:30px;
 font-size:18px;
 transition:0.3s;
@@ -106,12 +60,14 @@ nav a:hover{
 color:#38bdf8;
 }
 
-/* Hero Section */
-
 .hero{
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
 padding:120px 10%;
-max-width:1100px;
-margin:auto;
+min-height:90vh;
+flex-direction:column;
 }
 
 .hero h1{
@@ -126,76 +82,70 @@ color:#38bdf8;
 
 .hero p{
 font-size:22px;
-line-height:1.8;
 color:#cbd5e1;
 max-width:800px;
-margin-top:20px;
-}
-
-.buttons{
-margin-top:40px;
+line-height:1.8;
+margin-bottom:40px;
 }
 
 .btn{
 display:inline-block;
 padding:15px 35px;
 background:#38bdf8;
-color:white;
+color:black;
 text-decoration:none;
-border-radius:10px;
-margin-right:15px;
+font-weight:bold;
+border-radius:40px;
 transition:0.3s;
-font-size:18px;
+margin:10px;
 }
 
 .btn:hover{
-transform:translateY(-5px);
-background:#0ea5e9;
+transform:scale(1.08);
+background:white;
 }
 
-/* About Cards */
-
-.about{
-padding:80px 10%;
+.stats{
 display:flex;
-gap:30px;
-flex-wrap:wrap;
 justify-content:center;
+gap:30px;
+padding:40px 10%;
+flex-wrap:wrap;
 }
 
-.card{
+.stat-box{
 background:#111827;
 padding:35px;
+width:220px;
+text-align:center;
 border-radius:20px;
-width:300px;
 transition:0.3s;
+box-shadow:0 0 20px rgba(0,0,0,0.3);
 }
 
-.card:hover{
+.stat-box:hover{
 transform:translateY(-10px);
 }
 
-.card h3{
-margin-bottom:15px;
+.stat-box h2{
+font-size:45px;
 color:#38bdf8;
-font-size:24px;
+margin-bottom:10px;
 }
 
-.card p{
-line-height:1.7;
+.stat-box p{
 color:#cbd5e1;
+font-size:18px;
 }
-
-/* Projects */
 
 .projects{
-padding:80px 10%;
+padding:100px 10%;
+text-align:center;
 }
 
 .projects h2{
-font-size:50px;
-margin-bottom:50px;
-text-align:center;
+font-size:55px;
+margin-bottom:60px;
 }
 
 .project-grid{
@@ -204,39 +154,62 @@ grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
 }
 
-.project{
+.project-card{
 background:#111827;
-padding:30px;
-border-radius:20px;
-transition:0.3s;
+padding:35px;
+border-radius:25px;
+transition:0.4s;
+text-align:left;
+box-shadow:0 0 25px rgba(0,0,0,0.3);
 }
 
-.project:hover{
-transform:translateY(-10px);
+.project-card:hover{
+transform:translateY(-12px);
 }
 
-.project h3{
+.project-card h3{
+font-size:28px;
 margin-bottom:15px;
 color:#38bdf8;
-font-size:24px;
 }
 
-.project p{
-line-height:1.7;
+.project-card p{
+line-height:1.8;
 color:#cbd5e1;
+margin-bottom:25px;
 }
 
-/* Footer */
+.project-card a{
+text-decoration:none;
+color:#38bdf8;
+font-weight:bold;
+}
+
+.internship{
+padding:100px 10%;
+text-align:center;
+}
+
+.internship h2{
+font-size:55px;
+margin-bottom:30px;
+}
+
+.internship p{
+font-size:22px;
+color:#cbd5e1;
+max-width:900px;
+margin:auto;
+line-height:1.8;
+}
 
 footer{
 text-align:center;
-padding:30px;
+padding:40px;
+background:#0f172a;
 margin-top:60px;
-background:#111827;
 color:#94a3b8;
 }
-
-/* Mobile */
 
 @media(max-width:768px){
 
@@ -248,28 +221,32 @@ font-size:50px;
 font-size:18px;
 }
 
-header{
-flex-direction:column;
-gap:15px;
+.projects h2,
+.internship h2{
+font-size:40px;
 }
 
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
 
-<div class="logo">Ayush Roy</div>
+<div class="logo">
+Ayush Roy
+</div>
 
 <nav>
-
 <a href="#">Home</a>
 <a href="#projects">Projects</a>
-<a href="https://www.instagram.com/ayushroyyyyy?igsh=NHUwcGV1Mnl2Zjl4" target="_blank">Instagram</a>
+<a href="#internship">3D Printing</a>
+
+<a href="https://www.instagram.com/ayushroyyyyy?igsh=NHUwcGV1Mnl2Zjl4" target="_blank">
+Instagram
+</a>
 
 </nav>
 
@@ -283,59 +260,38 @@ Future <span>Innovator</span><br>
 </h1>
 
 <p>
-Passionate about technology, innovation, 3D printing,
-creative science projects, and futuristic ideas.
-Building modern experiences and documenting learning journeys through projects and experiments.
+Hi, I'm Ayush Roy — passionate about technology,
+3D printing, physics experiments, futuristic ideas,
+and building creative modern projects.
+Exploring innovation and turning imagination into reality.
 </p>
-
-<div class="buttons">
 
 <a class="btn" href="#projects">
 View Projects
 </a>
 
-<a class="btn" href="https://www.instagram.com/ayushroyyyyy?igsh=NHUwcGV1Mnl2Zjl4" target="_blank">
-Instagram
-</a>
-
-</div>
-
 </section>
 
-<section class="about">
+<section class="stats">
 
-<div class="card">
-
-<h3>Physics Experiments</h3>
-
-<p>
-Exploring innovative physics experiments
-with practical demonstrations and real-world applications.
-</p>
-
+<div class="stat-box">
+<h2>10+</h2>
+<p>Projects</p>
 </div>
 
-<div class="card">
-
-<h3>3D Printing Internship</h3>
-
-<p>
-Learning modern 3D printing technology,
-creative modeling, and innovative manufacturing systems.
-</p>
-
+<div class="stat-box">
+<h2>3+</h2>
+<p>Innovations</p>
 </div>
 
-<div class="card">
+<div class="stat-box">
+<h2>5+</h2>
+<p>Certifications</p>
+</div>
 
-<h3>Creative Vision</h3>
-
-<p>
-Interested in futuristic technology,
-AI concepts, modern web experiences,
-and innovative scientific ideas.
-</p>
-
+<div class="stat-box">
+<h2>2+</h2>
+<p>Years Learning</p>
 </div>
 
 </section>
@@ -346,55 +302,69 @@ and innovative scientific ideas.
 
 <div class="project-grid">
 
-<div class="project">
+<div class="project-card">
 
-<h3>⚡ Smart Laser Security Alarm</h3>
+<h3>Laser Security Alarm</h3>
 
 <p>
-A smart security project using laser light,
-LDR sensor, and buzzer system for intrusion detection.
+A smart laser-based security system using
+laser light, LDR sensor, and buzzer mechanism
+for intrusion detection.
 </p>
-<br><br>
 
-<a class="btn" href="laser.html">
-View Project
+<a href="laser.html">
+View Project →
 </a>
+
 </div>
 
-<div class="project">
+<div class="project-card">
 
-<h3>🖨️ 3D Printing Journey</h3>
+<h3>Personal Portfolio Website</h3>
+
+<p>
+Designed and developed a modern personal
+portfolio website using HTML and CSS
+with responsive design and animations.
+</p>
+
+</div>
+
+<div class="project-card">
+
+<h3>3D Printing Journey</h3>
 
 <p>
 Documenting internship experiences,
-creative 3D models, and modern manufacturing concepts.
+creative 3D models, manufacturing concepts,
+and modern prototyping technologies.
 </p>
 
 </div>
-
-<div class="project">
-
-<h3>🌐 Personal Portfolio Website</h3>
-
-<p>
-Designed and developed a responsive modern website
-using HTML and CSS hosted on GitHub Pages.
-</p>
-
-</div>
-
 
 </div>
 
 </section>
 
+<section class="internship" id="internship">
+
+<h2>3D Printing Internship</h2>
+
+<p>
+Currently exploring modern 3D printing technologies,
+prototype designing, manufacturing concepts,
+and innovative engineering ideas through internship learning.
+Regular updates and project showcases coming soon.
+</p>
+
+</section>
+
 <footer>
 
-© 2026 Ayush Roy • All Rights Reserved
+© 2026 Ayush Roy | All Rights Reserved
 
 </footer>
 
 </body>
-
 </html>
 ```
