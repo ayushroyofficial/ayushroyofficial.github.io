@@ -1,7 +1,9 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -35,10 +37,10 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:25px 10%;
+background:rgba(0,0,0,0.3);
 backdrop-filter:blur(10px);
 position:sticky;
 top:0;
-background:rgba(0,0,0,0.3);
 z-index:1000;
 }
 
@@ -83,7 +85,7 @@ color:#38bdf8;
 .hero p{
 font-size:22px;
 color:#cbd5e1;
-max-width:800px;
+max-width:850px;
 line-height:1.8;
 margin-bottom:40px;
 }
@@ -120,7 +122,6 @@ width:220px;
 text-align:center;
 border-radius:20px;
 transition:0.3s;
-box-shadow:0 0 20px rgba(0,0,0,0.3);
 }
 
 .stat-box:hover{
@@ -128,87 +129,67 @@ transform:translateY(-10px);
 }
 
 .stat-box h2{
-font-size:45px;
+font-size:40px;
 color:#38bdf8;
 margin-bottom:10px;
 }
 
 .stat-box p{
-color:#cbd5e1;
 font-size:18px;
+color:#cbd5e1;
 }
 
-.projects{
+.section{
 padding:100px 10%;
-text-align:center;
 }
 
-.projects h2{
+.section h2{
 font-size:55px;
+text-align:center;
 margin-bottom:60px;
 }
 
-.project-grid{
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
 }
 
-.project-card{
+.card{
 background:#111827;
 padding:35px;
 border-radius:25px;
 transition:0.4s;
-text-align:left;
-box-shadow:0 0 25px rgba(0,0,0,0.3);
 }
 
-.project-card:hover{
-transform:translateY(-12px);
+.card:hover{
+transform:translateY(-10px);
 }
 
-.project-card h3{
+.card h3{
 font-size:28px;
 margin-bottom:15px;
 color:#38bdf8;
 }
 
-.project-card p{
+.card p{
 line-height:1.8;
 color:#cbd5e1;
-margin-bottom:25px;
+margin-bottom:20px;
 }
 
-.project-card a{
+.card a{
 text-decoration:none;
 color:#38bdf8;
 font-weight:bold;
-}
-
-.internship{
-padding:100px 10%;
-text-align:center;
-}
-
-.internship h2{
-font-size:55px;
-margin-bottom:30px;
-}
-
-.internship p{
-font-size:22px;
-color:#cbd5e1;
-max-width:900px;
-margin:auto;
-line-height:1.8;
 }
 
 footer{
 text-align:center;
 padding:40px;
 background:#0f172a;
-margin-top:60px;
 color:#94a3b8;
+margin-top:50px;
 }
 
 @media(max-width:768px){
@@ -221,14 +202,14 @@ font-size:50px;
 font-size:18px;
 }
 
-.projects h2,
-.internship h2{
+.section h2{
 font-size:40px;
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
@@ -240,9 +221,11 @@ Ayush Roy
 </div>
 
 <nav>
+
 <a href="#">Home</a>
 <a href="#projects">Projects</a>
-<a href="#internship">3D Printing</a>
+<a href="#innovation">Innovation</a>
+<a href="#certificates">Certificates</a>
 
 <a href="https://www.instagram.com/ayushroyyyyy?igsh=NHUwcGV1Mnl2Zjl4" target="_blank">
 Instagram
@@ -261,8 +244,8 @@ Future <span>Innovator</span><br>
 
 <p>
 Hi, I'm Ayush Roy — passionate about technology,
-3D printing, physics experiments, futuristic ideas,
-and building creative modern projects.
+3D printing, creative science projects,
+modern web experiences, and futuristic ideas.
 Exploring innovation and turning imagination into reality.
 </p>
 
@@ -275,41 +258,40 @@ View Projects
 <section class="stats">
 
 <div class="stat-box">
-<h2>10+</h2>
-<p>Projects</p>
+<h2>Physics</h2>
+<p>Creative Experiments</p>
 </div>
 
 <div class="stat-box">
-<h2>3+</h2>
-<p>Innovations</p>
+<h2>3D</h2>
+<p>Printing Internship</p>
 </div>
 
 <div class="stat-box">
-<h2>5+</h2>
-<p>Certifications</p>
+<h2>Web</h2>
+<p>Portfolio Development</p>
 </div>
 
 <div class="stat-box">
-<h2>2+</h2>
-<p>Years Learning</p>
+<h2>AI</h2>
+<p>Future Learning Journey</p>
 </div>
 
 </section>
 
-<section class="projects" id="projects">
+<section class="section" id="projects">
 
 <h2>Featured Projects</h2>
 
-<div class="project-grid">
+<div class="grid">
 
-<div class="project-card">
+<div class="card">
 
-<h3>Laser Security Alarm</h3>
+<h3>⚡ Laser Security Alarm</h3>
 
 <p>
-A smart laser-based security system using
-laser light, LDR sensor, and buzzer mechanism
-for intrusion detection.
+A smart laser-based security system using laser light,
+LDR sensor, and buzzer mechanism for intrusion detection.
 </p>
 
 <a href="laser.html">
@@ -318,26 +300,24 @@ View Project →
 
 </div>
 
-<div class="project-card">
+<div class="card">
 
-<h3>Personal Portfolio Website</h3>
+<h3>🌐 Personal Portfolio Website</h3>
 
 <p>
-Designed and developed a modern personal
-portfolio website using HTML and CSS
-with responsive design and animations.
+Designed and developed a responsive modern portfolio website
+using HTML and CSS hosted on GitHub Pages.
 </p>
 
 </div>
 
-<div class="project-card">
+<div class="card">
 
-<h3>3D Printing Journey</h3>
+<h3>📷 GPS Camera Idea</h3>
 
 <p>
-Documenting internship experiences,
-creative 3D models, manufacturing concepts,
-and modern prototyping technologies.
+Planning and developing a smart GPS camera concept
+for educational and creative purposes.
 </p>
 
 </div>
@@ -346,16 +326,90 @@ and modern prototyping technologies.
 
 </section>
 
-<section class="internship" id="internship">
+<section class="section" id="innovation">
 
-<h2>3D Printing Internship</h2>
+<h2>Innovation Ideas</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>🚀 Smart Technology Concepts</h3>
 
 <p>
-Currently exploring modern 3D printing technologies,
-prototype designing, manufacturing concepts,
-and innovative engineering ideas through internship learning.
-Regular updates and project showcases coming soon.
+Exploring futuristic concepts including AI tools,
+smart security systems, GPS technology,
+and modern digital innovations.
 </p>
+
+</div>
+
+<div class="card">
+
+<h3>🧠 Creative Problem Solving</h3>
+
+<p>
+Interested in creating innovative solutions
+through science, technology, and creative thinking.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>⚙️ Future Projects</h3>
+
+<p>
+Working on future ideas related to automation,
+creative applications, and modern web experiences.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="certificates">
+
+<h2>Learning & Certifications</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>🖨️ 3D Printing Internship</h3>
+
+<p>
+Currently learning modern 3D printing technologies,
+creative modeling, and manufacturing systems.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>💻 Web Development Learning</h3>
+
+<p>
+Learning website development,
+modern UI design, and GitHub hosting.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🤖 AI & Technology Exploration</h3>
+
+<p>
+Exploring AI tools, futuristic technologies,
+and creative digital experiences.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
@@ -366,5 +420,6 @@ Regular updates and project showcases coming soon.
 </footer>
 
 </body>
+
 </html>
 ```
